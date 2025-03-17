@@ -32,5 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Stage 2 - Setup Docker Container & Port Forward
         run: |
+          curl https://myip.wtf/text
           docker run -p 6080:80 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc &
           lt --port 6080 --subdomain auservps
+          
